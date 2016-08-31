@@ -1,2 +1,2 @@
-# INFURA Documentation
-Documentation for INFURA infura.io
+# Official Public Repository for INFURA
+
