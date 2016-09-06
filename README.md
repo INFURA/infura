@@ -1,6 +1,11 @@
 # INFURA
 
 
-Visit [https://infura.io](https://infura.io) to begin using the service.  
+Website: [https://infura.io](https://infura.io)
 
-This site will allow you to report issues and read documenation.
+Wiki, including FAQ: [https://github.com/INFURA/Infura/wiki]
+
+Issues: [https://github.com/INFURA/Infura/issues]
+
+Service Health: [http://status.infura.io]
+
