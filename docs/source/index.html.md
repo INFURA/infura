@@ -23,7 +23,7 @@ If you're not sure which network to use, use Mainnet.
 Network      | Description                                      | URL
 -------------|--------------------------------------------------|-------------------------------------------------------------------
 Mainnet      | production network                               | [https://mainnet.infura.io/](https://mainnet.infura.io/)
-Morden       | test network                                     | [https://morden.infura.io/](https://morden.infura.io/)
+Ropsten      | test network                                     | [https://ropsten.infura.io/](https://ropsten.infura.io/)
 ConsenSysNet | [ConsenSys](https://consensys.net/) test network | [https://consensysnet.infura.io/](https://consensysnet.infura.io/)
 
 <aside class="notice">
