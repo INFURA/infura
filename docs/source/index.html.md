@@ -12,7 +12,7 @@ search: true
 
 # Introduction
 
-INFURA provides the world with secure, stable, and scalable Ethereum nodes. These docs will help you take advantage of all the features INFURA provides.
+INFURA provides the world with secure, stable, and scalable Ethereum nodes. These docs will help you take advantage of the features INFURA provides.
 
 # Endpoints
 
@@ -105,9 +105,7 @@ If you try to use a method that is not on this list, you will receive a `405 Met
 
 # Choosing a client to handle your request
 
-In some situations, you may want your request to be handled by a specific client (e.g. Parity).
-
-To request a specific client, include the `Infura-Ethereum-Preferred-Client` HTTP header in your request. Next, provide the client name in lowercase.
+In some situations, you may want your request to be handled by a specific client (e.g. Parity). To request a specific client, include the `Infura-Ethereum-Preferred-Client` HTTP header in your request. Next, provide the client name in lowercase.
 
 > Selecting a preferred Ethereum client
 
