@@ -103,51 +103,18 @@ If you try to use a method that is not on this list, you will receive a `405 Met
 * [shh_getFilterChanges](https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_getFilterChanges)
 * [shh_getMessages](https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_getMessages)
 
-# Authentication
-
-INFURA optionally supports authentication. Authenticated requests have a number of benefits, such as the absence of throttling. Please contact INFURA to set up an account.
-
-To authenticate, submit your username and password at the authentication endpoint `/auth`. A JWT token is returned in the response body. Submit that token in the `Authorization` header of your JSON-RPC requests to authenticate them. An authentication failure results in a `401 Unauthorized` response.
-
-> Authenticating
-
-```shell
-$ curl -X POST \
-  -H "Content-Type: application/json" \
-  --data '{"user": "1711dcbd-df16-468b-92ef-a6761b12647a", "password": "password"}' \
-  "https://mainnet.infura.io/auth"
-{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpbmZ1cmEtZmVycnltYW4iLCJleHAiOjE0ODE0MDE3NzUsImlhdCI6MTQ3ODgwOTc3NSwiaXNzIjoiaW5mdXJhLWZlcnJ5bWFuIiwic3ViIjoiMTcxMWRjYmQtZGYxNi00NjhiLTkyZWYtYTY3NjFiMTI2NDdhIn0.GhR9SFWUfTFdUgMw7nXhzo6Jz7CC-4IOGceqYHd2ndQ"}
-```
-
-> Issuing an authenticated request
-
-```shell
-$ curl -X POST \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpbmZ1cmEtZmVycnltYW4iLCJleHAiOjE0ODE0MDE3NzUsImlhdCI6MTQ3ODgwOTc3NSwiaXNzIjoiaW5mdXJhLWZlcnJ5bWFuIiwic3ViIjoiMTcxMWRjYmQtZGYxNi00NjhiLTkyZWYtYTY3NjFiMTI2NDdhIn0.GhR9SFWUfTFdUgMw7nXhzo6Jz7CC-4IOGceqYHd2ndQ" \
-  --data '{"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}' \
-  "https://mainnet.infura.io/"
-{"jsonrpc":"2.0","result":"0x27b884","id":1}
-```
-
 # Choosing a client to handle your request
 
-In some situations, you may want your request to be handled by a specific client (such as Geth or Parity) or even a specific version of that client.
+In some situations, you may want your request to be handled by a specific client (e.g. Parity).
 
-INFURA provides several different clients (and client versions) as part of its offering. Typically, the 2 or 3 most recent releases are available.
-
-To request a specific client, include the `Infura-Ethereum-Preferred-Client` HTTP header in your request. Next, provide the client name in lowercase, followed optionally by the version. For the version, you can provide either the complete version number (`X.Y.Z`) or just the major and minor version (`X.Y`) or just the major version (`X`).  If `.Z` or `.Y.Z` are missing, INFURA will automatically select a recent version of `.Z` or `.Y.Z` value.
-
-<aside class="notice">
-Do not add any prefixes to the version number. For example, use "1.4.10", not "v1.4.10".
-</aside>
+To request a specific client, include the `Infura-Ethereum-Preferred-Client` HTTP header in your request. Next, provide the client name in lowercase.
 
 > Selecting a preferred Ethereum client
 
 ```shell
 $ curl -i -X POST \
   -H "Content-Type: application/json" \
-  -H "Infura-Ethereum-Preferred-Client: parity 1.4" \
+  -H "Infura-Ethereum-Preferred-Client: parity" \
   --data '{"jsonrpc": "2.0", "id": 1, "method": "eth_blockNumber", "params": []}' \
   "https://mainnet.infura.io/"
 HTTP/1.1 200 OK
@@ -165,15 +132,11 @@ Infura-Ethereum-Client: parity 1.4.1
 
 The response includes the `Infura-Ethereum-Client` header, which names the actual client and version that handled the request.
 
-If you request a client or client/version that is not available, you will receive a `400 Bad Request` response.
+If you request a client or client that is not available, you will receive a `400 Bad Request` response.
 
-## Available clients and versions
+## Available clients
 
-<aside class="notice">
-INFURA's available client versions change about as frequestly as the client developers release them, so check this list often.
-</aside>
-
-Client                                   | Name     | Versions
------------------------------------------|----------|---------------------------
-[Parity](https://ethcore.io/parity.html) | `parity` | `1.3.10`, `1.4.0`, `1.4.1`
-[Geth](http://geth.ethereum.org/)        | `geth`   | `1.4.17`, `1.4.18`
+Client                                   | Name
+-----------------------------------------|---------
+[Parity](https://ethcore.io/parity.html) | `parity`
+[Geth](http://geth.ethereum.org/)        | `geth`
