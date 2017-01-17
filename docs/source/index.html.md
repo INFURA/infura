@@ -5,9 +5,8 @@ language_tabs:
   - shell
 
 toc_footers:
-  - <a href='#'>Sign up for an INFURA account</a>
 
-search: true
+search: false
 ---
 
 # Introduction
