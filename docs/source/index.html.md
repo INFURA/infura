@@ -63,6 +63,7 @@ If you try to use a method that is not on this list, you will receive a `405 Met
 * [eth_mining](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_mining)
 * [eth_hashrate](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_hashrate)
 * [eth_gasPrice](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_gasprice)
+* [eth_accounts](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_accounts)
 * [eth_blockNumber](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_blocknumber)
 * [eth_getBalance](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getbalance)
 * [eth_getStorageAt](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_getstorageat)
