@@ -1,11 +1,9 @@
-# INFURA
+# Infura
 
+**[Website](https://infura.io)**
 
-Website: [https://infura.io](https://infura.io)
+**[Documentation](https://infura.io/docs)** - Not sure where to start? Check out our documentation.
 
-Wiki, including FAQ: [https://github.com/INFURA/Infura/wiki](https://github.com/INFURA/Infura/wiki)
+**[Status](https://status.infura.io)** - Think you're having issues? Check the Infura network status.
 
-Issues: [https://github.com/INFURA/Infura/issues](https://github.com/INFURA/Infura/issues)
-
-Service Health: [http://status.infura.io](http://status.infura.io)
-
+**[Community](https://community.infura.io)** – Submit bugs, ask questions, provide feedback, and request features.
